@@ -1,0 +1,23 @@
+[Event "Rated Bullet game"]
+[Site "https://lichess.org/oejekISi"]
+[Date "2020.08.15"]
+[White "DrNykterstein"]
+[Black "BabaRamdev"]
+[Result "1-0"]
+[UTCDate "2020.08.15"]
+[UTCTime "00:30:29"]
+[WhiteElo "3110"]
+[BlackElo "2884"]
+[WhiteRatingDiff "+3"]
+[BlackRatingDiff "-3"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "E20"]
+[Opening "Nimzo-Indian Defense: Romanishin Variation"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. g3 O-O 5. Bg2 d5 6. cxd5 exd5 7. Nh3 c6 8. O-O Re8 9. f3 c5 10. a3 cxd4 11. axb4 dxc3 12. bxc3 Nc6 13. Nf2 Ne5 14. Bg5 Nc4 15. e4 h6 16. Bxf6 Qxf6 17. Qxd5 Ne3 18. Qb5 Rd8 19. Rfc1 Rd2 20. Qc5 Nxg2 21. Kxg2 Bh3+ 22. Kxh3 Qxf3 23. Rf1 Re8 24. Qf5 Qxc3 25. Ng4 Qc7 26. Rac1 Qd7 27. Rc5 Qxf5 28. exf5 Rd7 29. f6 Kh7 30. fxg7 1-0
+
+
