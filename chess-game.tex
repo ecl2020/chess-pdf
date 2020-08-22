@@ -5,22 +5,47 @@
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0pt}
 \begin{document}
-\begin{center}
-\textbf{lul1 -- leonard8209}
+\begin{center}\textbf{lul1 -- leonard8209}
 \\\textit{https://lichess.org/1BFpe3vh}
 \\Slav Defense: Czech Variation, Classical System, Main Line
 \end{center}
-\newgame\mainline{1.Nf3   c6  2.c4   d5  3.d4   Nf6  4.Nc3   dxc4  5.a4   Bf5  6.e3   e6  7.Bxc4   Bb4  8.O-O   O-O  9.Qe2    Bg6 }\begin{center}
-\showboard
+\newgame\mainline{1.Nf3   c6  2.c4   d5  3.d4   Nf6  4.Nc3   dxc4  5.a4   Bf5  6.e3   e6  7.Bxc4   Bb4  8.O-O   O-O  9.Qe2    Bg6 }\begin{center}\showboard
 \end{center}
-\mainline{10.Ne5   Nbd7  11.f4?     Nxe5  12.fxe5   Nd5  13.Bd2   Qa5  14.Rfc1   c5?!    15.Nxd5   Bxd2?    16.Ne7+   Kh8  17.Nxg6+   hxg6?!   }\begin{center}
-\showboard
+\mainline{10.Ne5   Nbd7  11.f4?     Nxe5  }\par
+\variation[invar]{11...Nxg6 }\par
+ \mainline[outvar]{ 12.fxe5   Nd5  13.Bd2   Qa5  14.Rfc1   c5?!    }\par
+\variation[invar]{14...Rac8 15.Bd3 c5 16.Bxg6 hxg6 17.Nxd5 exd5 18.Bxb4 Qxb4 19.Rxc5 Rxc5 20.dxc5 Rc8 21.Qf3 }\par
+ \mainline[outvar]{ 15.Nxd5   Bxd2?    }\par
+\variation[invar]{15...exd5 16.Bxd5 cxd4 17.Bxb4 Qxb4 18.Rc4 d3 19.Rxb4 dxe2 20.Bf3 Rad8 21.Bxe2 b6 22.Rc1 }\par
+ \mainline[outvar]{ 16.Ne7+   Kh8  17.Nxg6+   hxg6?!   }\begin{center}\showboard
 \end{center}
-\mainline{18.Rd1   Bb4  19.Rd3??     cxd4?    20.exd4   Rac8  21.Kh1   Be7?!    22.Rf1?!     Qxa4  23.b3   Qd7?    24.Qg4??     b5  25.Rh3+   Kg8 }\begin{center}
-\showboard
+\mainline{}\par
+\variation[invar]{17...fxg6 18.Rd1 }\par
+ \mainline[outvar]{ 18.Rd1   Bb4  19.Rd3??     cxd4?    }\par
+\variation[invar]{19...a6 20.Qd1 Qc7 21.Qg4 b5 22.e4 Kg8 23.Rh3 Qd8 24.Bxe6 Qxd4+ 25.Kh1 fxe6 26.Qxe6+ }\par
+ \mainline[outvar]{ 20.exd4   Rac8  21.Kh1   Be7?!    }\par
+\variation[invar]{21...Bd2 22.b3 Bh6 23.Rf1 Qc7 24.d5 exd5 25.Rxd5 Rce8 26.Qe4 a6 27.Qd4 Qe7 28.Rd7 }\par
+ \mainline[outvar]{ 22.Rf1?!     Qxa4  }\par
+\variation[invar]{22.b3 Bg5 }\par
+ \mainline[outvar]{ 23.b3   Qd7?    }\par
+\variation[invar]{23...Qb4 24.Qg4 Rxc4 25.bxc4 Qxc4 26.Rfd1 Kg8 27.Qf3 Qc7 28.d5 exd5 29.Rxd5 Bc5 30.Qc3 }\par
+ \mainline[outvar]{ 24.Qg4??     b5  }\par
+\variation[invar]{24.d5 exd5 }\par
+ \mainline[outvar]{ 25.Rh3+   Kg8 }\begin{center}\showboard
 \end{center}
-\mainline{26.Be2   Rfd8?!    27.Qf4   Rf8  28.Rd1   Qd5  29.Kg1?     a6  30.g4?     Rc2  31.Bf1   g5?!    32.Qe3   Rfc8  33.Rg3   R8c3?   }\begin{center}
-\showboard
+\mainline{26.Be2   Rfd8?!    }\par
+\variation[invar]{26...Rc2 }\par
+ \mainline[outvar]{ 27.Qf4   Rf8  28.Rd1   Qd5  29.Kg1?     a6  }\par
+\variation[invar]{29.Rhd3 b4 30.Bf3 Qb5 31.Qe3 Rc3 32.Rxc3 bxc3 33.Qxc3 Rd8 34.g3 Qb4 35.Qxb4 Bxb4 }\par
+ \mainline[outvar]{ 30.g4?     Rc2  }\par
+\variation[invar]{30.Rhd3 Qd8 31.Bf3 Bg5 32.Qg3 Qe7 33.d5 exd5 34.Rxd5 Rc1 35.Rxc1 Bxc1 36.Qe1 Ba3 }\par
+ \mainline[outvar]{ 31.Bf1   g5?!    }\par
+\variation[invar]{31...Bc5 }\par
+ \mainline[outvar]{ 32.Qe3   Rfc8  33.Rg3   R8c3?   }\begin{center}\showboard
 \end{center}
-\mainline{34.Qxc3   Rxc3  35.Rxc3   Qf3??    36.Rxf3   1-0
+\mainline{}\par
+\variation[invar]{33...Ba3 34.Qf3 Qxf3 35.Rxf3 Bc1 36.Bd3 Rb2 37.Be4 a5 38.d5 Bf4 39.Kf1 Rxh2 40.dxe6 }\par
+ \mainline[outvar]{ 34.Qxc3   Rxc3  35.Rxc3   Qf3??    }\par
+\variation[invar]{35...Qe4 36.h3 }\par
+ \mainline[outvar]{ 36.Rxf3   1-0
  }\end{document}

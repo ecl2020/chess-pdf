@@ -1,56 +1,36 @@
 import re
 # italic, bold, wrapCenter
 from latex_commands import *
+# parseComments(moves), parseMoves(moves)
+from parsePGN import *
 
 
 def showGame(game):
     newgame = "\\newgame\\mainline{"
     moves = getLine(game, "Moves ")
     movelist = parseMoves(moves)
+    variationlist = parseComments(moves)[1]
     for i in range(0, len(movelist)):
-        newgame += f"{i+1}" + "."
-        # print("adding move ", i, ": ", movelist[i])
+        black = False
+        if variationlist.get(str(i)):
+            newgame += "}\\par\n\\variation[invar]{" + f"{i}."
+            if not re.search(" [BKNQRa-h]", variationlist.get(str(i))[0]):
+                black = True
+            if black:
+                newgame += ".."
+            for j in range(0, len(variationlist.get(str(i)))):
+                if j > 0:
+                    newgame += f"{i + j}."
+                newgame += variationlist.get(str(i))[j] + " "
+            newgame += "}\\par\n \\mainline[outvar]{ "
+        newgame += f"{i+1}."
         if i != 0 and i % 8 == 0:
-            newgame += movelist[i] + "}" + wrapCenter("\\showboard\n") + \
+            newgame += movelist[i] + "}" + wrap("\\showboard\n", "center") + \
                        "\\mainline{"
         else:
             newgame += movelist[i] + " "
     newgame += "}"
     return newgame
-
-
-def parseComments(moves):
-    variations = []
-    # finding random characters because of the awkward arrows
-    comments = re.findall("{[A-z0-9-., %:$#â†’\\(\\)\\+]+}|\\([,A-z0-9$#â†’ .\\+]+\\)", moves)
-    skips = re.findall("\\d+\\.\\.\\.", moves)
-    for comment in comments:
-        if comment[0] == "(":
-            variation = comment[1:-1]
-            variations.append([variation[0:variation.find(".")],
-                               parseMoves(variation)])
-        moves = moves.replace(comment, '')
-    for skip in reversed(skips):
-        moves = moves.replace(skip, '')
-    # print(variations)
-    return moves
-
-
-def parseMoves(moves):
-    if "{" in moves or "(" in moves:
-        moves = parseComments(moves)
-    movelist = []
-    move_nos = re.finditer("\\d+\\.+ ", moves, flags=0)
-    for index in move_nos:
-        restofstring = moves[index.end():]
-        if re.search("\\d+\\.+ ", restofstring):
-            movelist.append(moves[index.end():moves.find(".", index.end())])
-        else:
-            movelist.append(moves[index.end():])
-    for i in range(0, len(movelist)):
-        if re.search(" \\d+$", movelist[i]):
-            movelist[i] = movelist[i][0:re.search(" \\d+$", movelist[i]).start()]
-    return movelist
 
 
 def setTitle(game):
@@ -82,7 +62,7 @@ def setDocument(address, game):
             "\\setlength{\\parskip}{0.5em}\n" +
             "\\setlength{\\parindent}{0pt}\n" +
             "\\begin{document}\n" +
-            wrapCenter(setTitle(game)) +
+            wrap(setTitle(game), "center") +
             showGame(game) +
             "\\end{document}\n"
         )

@@ -10,7 +10,7 @@ def italic(content):
            "}\n"
 
 
-def wrapCenter(content):
-    return "\\begin{center}\n" + \
+def wrap(content, type):
+    return "\\begin{" + type + "}" + \
            content + \
-           "\\end{center}\n"
+           "\\end{" + type + "}\n"
